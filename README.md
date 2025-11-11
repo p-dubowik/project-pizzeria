@@ -1,2 +1,1 @@
-# project-pizzeria
-JS based pizzeria project
+version 2.4
