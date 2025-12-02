@@ -31,7 +31,7 @@
         },
         datePicker: {
           wrapper: '.date-picker',
-          input: 'input[type="date"]',
+          input: 'input[name="date"]',
         },
         hourPicker: {
           wrapper: '.hour-picker',
