@@ -43,6 +43,11 @@
         peopleAmount: '.people-amount',
         hoursAmount: '.hours-amount',
         tables: '.floor-plan .table',
+        floor: '.floor-plan',
+        phone: '[name="phone"]',
+        address: '[name="address"]',
+        checkbox: '.booking-options .checkbox',
+        submitButton: '.order-confirmation button',
       },
       nav: {
         links: '.main-nav a',
@@ -78,6 +83,8 @@
     booking: {
     loading: 'loading',
     tableBooked: 'booked',
+    tableSelected: 'table.selected',
+    selected: 'selected',
     },
     nav: {
         active: 'active',
