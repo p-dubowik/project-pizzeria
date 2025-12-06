@@ -26,8 +26,13 @@ class MainPage{
         thisMain.dom.options = thisMain.dom.wrapper.querySelector(select.mainPage.options);
         thisMain.dom.optionButtons = thisMain.dom.wrapper.querySelectorAll(select.mainPage.optionButtons);
 
-        console.log(thisMain.dom.options);
 
+        const carouselElement = thisMain.dom.wrapper.querySelector('.carousel');
+
+        new Flickity(carouselElement, {
+            wrapAround: true,
+            autoPlay: true,
+        })
     }
 
     initActions(){
