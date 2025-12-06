@@ -45,6 +45,11 @@ const app = {
       })
     }
 
+    window.addEventListener('hashchange', function(){
+      const idFromHash = this.window.location.hash.replace('#/', '');
+      thisApp.activatePage(idFromHash);
+    })
+
   },
 
   activatePage: function(pageId){

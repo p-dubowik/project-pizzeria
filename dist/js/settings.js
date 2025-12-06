@@ -72,6 +72,10 @@
         edit: '[href="#edit"]',
         remove: '[href="#remove"]',
       },
+      mainPage: {
+        options: '.option_links',
+        optionButtons: '.option-wrapper',
+      },
   };
 
   export const classNames = {
