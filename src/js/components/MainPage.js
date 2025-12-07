@@ -32,6 +32,7 @@ class MainPage{
         new Flickity(carouselElement, {
             wrapAround: true,
             autoPlay: true,
+            pageDots: true,
         })
     }
 
@@ -47,14 +48,8 @@ class MainPage{
                 const linkId = option.getAttribute('data-id');
                 window.location.hash = '#/' + linkId;
             }
-
         })
-
-
-
     }
-
-
 }
 
 export default MainPage;

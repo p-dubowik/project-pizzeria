@@ -124,8 +124,6 @@ border-radius: $radius;
 
         overflow: hidden;
 
-
-
         img{
             object-fit: cover;
             width: 100%;
@@ -142,3 +140,100 @@ border-radius: $radius;
         padding: 0 20px;
     }
 }
+
+/* Gallery */
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .image-wrapper{
+        position: relative;
+        height: 190px;
+        width: 190px;
+        overflow: hidden;
+        border-radius: $radius;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &::after{
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+        &:hover::after{
+            opacity: 0.6;
+        }
+
+        .icons{
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            z-index: 2;
+
+            transition: opacity 0.4s ease;
+  
+            a{
+                display: inline-block;
+                color: white;
+                font-size: 22px;
+                margin: 2px 4px;
+                transition: all 0.4s ease;
+
+                &:first-of-type:hover{
+                    transform: scale(1.4);
+                    padding: 2px;
+                    color: red;
+                }
+
+                &:last-of-type:hover{
+                    transform: scale(1.4);
+                    padding: 2px;
+                    color: rgb(0, 170, 255);
+                }
+
+
+            }
+        }
+
+        &:hover .icons{
+            opacity: 1;
+        }
+    }
+}
+
+/* Social links */
+
+.social_links{
+    margin-top: 25px;
+
+    a{
+        font-family: 'Lato';
+        font-size: 14px;
+        line-height: 23px;
+        color: $color-main;
+    }
+
+}
+
+
+
+
