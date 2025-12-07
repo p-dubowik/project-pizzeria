@@ -201,7 +201,7 @@ border-radius: $radius;
                 &:first-of-type:hover{
                     transform: scale(1.4);
                     padding: 2px;
-                    color: red;
+                    color: $color-main;
                 }
 
                 &:last-of-type:hover{
