@@ -25,7 +25,7 @@ class MainPage{
 
         thisMain.dom.options = thisMain.dom.wrapper.querySelector(select.mainPage.options);
         thisMain.dom.optionButtons = thisMain.dom.wrapper.querySelectorAll(select.mainPage.optionButtons);
-
+        thisMain.dom.galleryWrapper = thisMain.dom.wrapper.querySelector(select.mainPage.gallery);
 
         const carouselElement = thisMain.dom.wrapper.querySelector('.carousel');
 
@@ -34,6 +34,8 @@ class MainPage{
             autoPlay: true,
             pageDots: true,
         })
+
+
     }
 
     initActions(){
@@ -49,6 +51,16 @@ class MainPage{
                 window.location.hash = '#/' + linkId;
             }
         })
+
+        thisMain.dom.galleryWrapper.addEventListener('click', function(event){
+            event.preventDefault();
+            const likeButton = event.target.closest('.fa-heart');
+
+            if(likeButton){
+                event.target.classList.toggle('red');
+            }
+        })
+
     }
 }
 

@@ -75,6 +75,7 @@
       mainPage: {
         options: '.option_links',
         optionButtons: '.option-wrapper',
+        gallery: '.gallery',
       },
   };
 
